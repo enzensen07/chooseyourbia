@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#141313">
+  <meta name="description" content="THE FIRST LOOK · YSL 小金条真实唇部试色概念体验。探索真实色号，拖动小金条，平滑切换完整薄涂与厚涂。">
+  <title>THE FIRST LOOK — YSL 唇色试色间</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.classList.add("intro-boot");</script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="campaign.css">
+  <noscript><style>html.intro-boot #siteContent{visibility:visible}</style></noscript>
+</head>
+<body>
+  <!-- The opening is created by JavaScript so the page remains readable without it. -->
+  <a class="skip-link" href="#atelier">进入试色间</a>
+  <div id="siteContent">
+  <header class="site-header">
+    <a class="wordmark" id="brandHome" href="#top" aria-label="YSL 官方标志，重播 THE FIRST LOOK 开场"><svg viewBox="160 160 180 380" role="img" aria-label="YSL"><image href="assets/brand/monogram-black.png" width="500" height="750"/></svg></a>
+    <nav aria-label="主导航"><button type="button" id="replayOpening">THE FIRST LOOK</button><a href="#atelier" class="nav-active">唇色试色间</a><a href="#after-her">AFTER HER</a></nav>
+    <button class="header-save" id="openGift" type="button" aria-label="查看我的心意卡"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.7A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11Z"/></svg><span>我的心意卡</span><b id="savedCount">0</b></button>
+  </header>
+
+  <main id="top">
+    <section class="atelier section-width" id="atelier" aria-labelledby="pageTitle">
+      <div class="intro">
+        <div><p class="eyebrow">THE SHADE ATELIER <span>YSL 小金条唇色试色间</span></p><h2 id="pageTitle" class="atelier-title" tabindex="-1">THE FIRST <em>LOOK.</em></h2></div>
+        <p class="intro-note">第一眼，由你。<span>一抹唇色，两种姿态。</span></p>
+      </div>
+
+      <div class="experience">
+        <div class="visual-column">
+          <div class="image-heading"><span id="imageModeLabel">THE ORIGINAL · 真实唇部试色</span><button type="button" id="viewOriginal">查看原图 <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 3H3v4m10-4h4v4M3 13v4h4m10-4v4h-4"/></svg></button></div>
+          <div class="image-stage" id="imageStage" data-mode="original" aria-busy="true">
+            <svg class="original-photo" id="originalPhoto" viewBox="70 148 1060 694" role="img" aria-labelledby="photoTitle" preserveAspectRatio="xMidYMid meet"><title id="photoTitle">1936 圣罗兰，原始唇部试色</title><image id="originalImage" width="1200" height="1200" href="assets/originals/IMG_4274.JPG"/></svg>
+            <svg class="effect-photo" id="effectPhoto" viewBox="0 0 600 500" role="img" aria-label="1936 圣罗兰，完整薄涂效果示意"><defs><clipPath id="thinPairClip" clipPathUnits="userSpaceOnUse"><rect id="thinSourceClip"/></clipPath><clipPath id="thickPairClip" clipPathUnits="userSpaceOnUse"><rect id="thickSourceClip"/></clipPath></defs><image id="thinEffect" width="1254" height="1254" clip-path="url(#thinPairClip)"/><image id="thickEffect" width="1254" height="1254" clip-path="url(#thickPairClip)" opacity="0"/></svg>
+            <span class="try-on-badge" id="tryOnBadge">薄厚效果示意</span>
+            <button type="button" id="applicator" class="applicator" role="slider" tabindex="0" aria-label="拖动小金条切换薄涂和厚涂" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-describedby="coatNote"><svg viewBox="400 60 110 685" aria-hidden="true"><defs><clipPath id="productOutline"><path d="M425 73 484 94 484 164 491 167 491 406 486 406 486 434 502 434 502 732 410 732 410 434 419 434 419 143 425 145Z"/></clipPath></defs><image id="productImage" href="assets/brand/lipstick-original.png" width="800" height="800" clip-path="url(#productOutline)"/></svg><span class="applicator-hint">向右拖动 · 厚涂</span></button>
+            <p class="image-error" id="imageError" hidden>图片暂时无法显示，请重新打开完整文件包。</p>
+          </div>
+          <div class="visual-footnote"><span id="photoCaption">保留原片质感，发现一抹颜色的不同表情。</span><span class="photo-credit">ORIGINAL SWATCH</span></div>
+          <div class="coat-controls" id="coatControls">
+            <div class="coat-heading"><p class="eyebrow">ONE SHADE. TWO EXPRESSIONS.</p><span id="coatStatus" role="status">轻盈薄涂</span></div>
+            <div class="coat-range-row"><button type="button" id="thinButton" aria-pressed="true">薄涂</button><input id="coatRange" type="range" min="0" max="100" step="0.1" value="0" aria-label="薄涂到厚涂的过渡" aria-describedby="coatNote"><button type="button" id="thickButton" aria-pressed="false">厚涂</button></div>
+            <p id="coatNote">左右拖动唇上的小金条，或下方滑杆，切换完整薄涂／厚涂。此处直接使用本轮提供的完整薄厚素材。</p>
+          </div>
+        </div>
+
+        <aside class="shade-panel" aria-labelledby="shadeName">
+          <div class="shade-panel-top"><p class="eyebrow">FIND YOUR SHADE</p><span id="shadeIndex">03 / 14</span></div>
+          <div class="shade-summary" aria-live="polite" aria-atomic="true"><p class="shade-number" id="shadeNumber">N° 1936</p><h2 id="shadeName">圣罗兰</h2><p class="shade-description" id="shadeDescription">琥珀柑茶 · 自信底色</p></div>
+          <div id="pairVariants" class="pair-variants" role="group" aria-label="37号薄厚素材版本" hidden></div>
+          <div class="shade-selection"><div class="selection-label"><span>挑一抹，令人回眸的颜色。</span><span id="shadeTotal">14 色</span></div><div class="shade-grid" id="shadeGrid" role="group" aria-label="选择唇膏色号"></div><p class="selected-caption" id="selectedCaption">已选 1936 · 圣罗兰</p></div>
+          <div class="view-selection"><p>选择体验</p><div class="view-tabs" role="group" aria-label="试色图片展示方式"><button type="button" id="originalMode" aria-pressed="false">完整原片</button><button type="button" id="effectMode" aria-pressed="true">完整薄厚试色</button></div><p class="view-help" id="viewHelp">左右拖动小金条，完整薄涂与厚涂自然过渡。</p></div>
+          <button class="save-shade" type="button" id="saveShade"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.7A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11Z"/></svg><span id="saveLabel">把这一抹，存入心意卡</span></button>
+          <p class="small-note">以喜欢的颜色，靠近她的偏爱。</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="campaign-editorial" aria-labelledby="editorialTitle">
+      <div class="editorial-visual"><img src="assets/campaign/p1-lip-visual.png" alt="深红唇妆与金色小金条的品牌视觉" width="474" height="540" loading="lazy"></div>
+      <div class="editorial-copy"><p class="eyebrow">THE FIRST LOOK / THE SLIM</p><h2 id="editorialTitle">第一眼，<br><em>记住你。</em></h2><p>薄涂轻盈，厚涂鲜明。<br>让喜欢的颜色，成为你的第一眼。</p><a href="#atelier" class="editorial-link">找到我的唇色</a></div>
+      <div class="editorial-product"><svg viewBox="265 620 650 1550" role="img" aria-label="黑金小金条与方形膏体"><image href="assets/campaign/p2-single-product.jpg" width="1200" height="2308"/></svg><span>THE SLIM · BLACK &amp; GOLD</span></div>
+    </section>
+    <section class="colour-edit section-width" aria-labelledby="colourEditTitle"><div class="colour-edit-heading"><div><p class="eyebrow">THE COLOUR EDIT</p><h2 id="colourEditTitle">不止一种，第一眼。</h2></div><p>选择一帧灵感，探索对应唇色。</p></div><div class="colour-stories">
+      <button type="button" class="colour-story" data-story-shade="37" aria-label="探索37号沸腾"><svg viewBox="0 370 600 590" role="img" aria-label="勃艮第红唇妆"><image href="assets/campaign/colour-37.jpg" width="1200" height="960"/></svg><span><b>37 沸腾</b><i>勃艮第红</i></span></button>
+      <button type="button" class="colour-story" data-story-shade="28" aria-label="探索28号野玫瑰"><svg viewBox="600 0 600 600" role="img" aria-label="暖意玫瑰与小金条"><image href="assets/campaign/colours-28-25.jpg" width="1200" height="1188"/></svg><span><b>28 野玫瑰</b><i>暖意玫瑰</i></span></button>
+      <button type="button" class="colour-story" data-story-shade="25" aria-label="探索25号直白裸棕"><svg viewBox="0 600 600 588" role="img" aria-label="棕调唇妆与金色管身"><image href="assets/campaign/colours-28-25.jpg" width="1200" height="1188"/></svg><span><b>25 直白裸棕</b><i>利落独飒</i></span></button>
+      <button type="button" class="colour-story" data-story-shade="32" aria-label="探索32号赤裸豆沙"><svg viewBox="600 0 600 600" role="img" aria-label="赤裸豆沙唇妆局部"><image href="assets/campaign/colours-32-35.jpg" width="1200" height="1200"/></svg><span><b>32 赤裸豆沙</b><i>温柔控场</i></span></button>
+      <button type="button" class="colour-story" data-story-shade="35" aria-label="探索35号绯红"><svg viewBox="0 600 600 600" role="img" aria-label="绯红唇妆与YSL标志"><image href="assets/campaign/colours-32-35.jpg" width="1200" height="1200"/></svg><span><b>35 绯红</b><i>亮粉野莓</i></span></button>
+    </div></section>
+
+    <section class="after-her" id="after-her" aria-labelledby="giftTitle"><div class="section-width gift-layout"><div class="gift-copy"><div class="brand-seal"><svg viewBox="160 160 180 380" role="img" aria-label="YSL 金色标志"><image href="assets/brand/monogram-black.png" width="500" height="750"/></svg><p class="eyebrow">THE FIRST LOOK IS JUST THE BEGINNING.</p></div><h2 id="giftTitle">AFTER <em>HER.</em></h2><p class="gift-line">第一眼心动，回眸后留香。</p><p class="gift-description">用一抹唇色表达心意，<br>让一份意料之外的发香，成为第二次发现。</p><button type="button" id="editGift" class="text-button">写下我的心意 <span>＋</span></button></div><div class="gift-preview" id="giftPreview"><div class="gift-preview-top"><span>THE FIRST LOOK</span><span>FOR HER</span></div><div class="gift-preview-center"><span class="gift-color" id="giftColor"></span><p id="giftShade">从一抹颜色开始</p><span id="giftSubtitle">在试色间，收藏属于她的那一抹。</span></div><div class="gift-preview-bottom"><span id="giftMessage">「回头的那一秒，是你。」</span><span>AFTER HER.</span></div></div></div></section>
+  </main>
+  <footer class="site-footer section-width"><p>YSL · THE FIRST LOOK / AFTER HER</p><div><span>创意概念 Demo</span><button type="button" id="showSources">关于试色素材</button></div><p class="footer-note">原片与完整薄厚示意素材已分别标注。屏幕、光线及个人唇色会影响实际观感。</p></footer>
+
+  </div>
+
+  <dialog id="originalDialog" class="original-dialog" aria-labelledby="originalDialogTitle"><div class="dialog-bar"><h2 id="originalDialogTitle">试色原片</h2><button type="button" data-close="originalDialog" class="close-button" aria-label="关闭原片">×</button></div><img id="fullOriginal" src="assets/originals/IMG_4274.JPG" alt="1936 圣罗兰，完整上传原图" width="1200" height="1200"><div id="originalVariants" class="original-variants" hidden></div><p id="originalSource">IMG_4274.JPG · 原始文件，未修改</p></dialog>
+
+  <dialog id="giftDialog" class="gift-dialog" aria-labelledby="giftDialogTitle"><div class="dialog-bar"><p class="eyebrow">A NOTE FOR HER</p><button type="button" data-close="giftDialog" class="close-button" aria-label="关闭心意卡">×</button></div><h2 id="giftDialogTitle">让颜色，替你说。</h2><p class="dialog-intro" id="giftSelectionText">先在试色间收藏一个色号。</p><label class="message-label" for="messageInput">写给她的一句话<span>最多 36 字</span></label><textarea id="messageInput" maxlength="36" rows="3" placeholder="回头的那一秒，是你。"></textarea><div class="message-presets"><button type="button" data-message="回头的那一秒，是你。">回头的那一秒</button><button type="button" data-message="愿每一次回眸，都有心动。">每一次心动</button></div><button type="button" id="downloadGift" class="save-shade" disabled>保存心意卡图片</button><p class="small-note">选色与文字仅保存在当前浏览器。</p></dialog>
+
+  <dialog id="sourceDialog" class="source-dialog" aria-labelledby="sourceTitle"><div class="dialog-bar"><p class="eyebrow">ABOUT THE IMAGES</p><button type="button" data-close="sourceDialog" class="close-button" aria-label="关闭素材说明">×</button></div><h2 id="sourceTitle">一抹颜色，两种表情。</h2><p>本轮 9 张完整薄厚图已全部接入，对应 8 个色号。37 号保留经典版与限定版，可以在色号面板中切换。14 个色号均可查看，其中 8 个支持小金条拖动薄厚切换，6 个仅提供单张涂法。</p><p>直接从每张图中显示完整薄涂与完整厚涂，并进行整体位置对齐。素材像素与颜色不作生成、补全或调色；拖动时展示两种效果的平滑过渡，中间状态不是额外拍摄的试色。示意素材不作为官方精确色彩依据。</p><h3>本轮完整薄厚素材 · 9 张</h3><div class="source-list" id="pairSourceList"></div><h3>最初试色原片 · 15 张</h3><div class="source-list" id="sourceList"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="noscript">请开启浏览器 JavaScript 以切换色号与拖动试色；原始图片可在 assets/originals 文件夹查看。</p></noscript>
+  <script src="opening.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
